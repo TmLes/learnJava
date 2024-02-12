@@ -4,7 +4,6 @@ public class MainApp {
     public static void main(String[] args) {
         GenBox<Integer> num1 = new GenBox<>(10);
         GenBox<Integer> num2 = new GenBox<>(30);
-        GenBox<String> name = new GenBox<>("John");
 
         System.out.println(num1.getObj() + num2.getObj());
 

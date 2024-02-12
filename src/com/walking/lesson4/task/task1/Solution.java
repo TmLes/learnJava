@@ -8,13 +8,17 @@ import java.util.Scanner;
  */
 public class Solution {
     public static void main(String[] args) {
-        var scanner = new Scanner(System.in);
-        double num1 = Double.parseDouble(scanner.nextLine());
-        double num2 = Double.parseDouble(scanner.nextLine());
-        if (num1 % 2 == 0) {
-            System.out.printf("%.0f * %.0f = %.0f%n", num1, num2, num1 * num2);
-        } else {
-            System.out.printf("%.0f / %.0f = %.1f%n", num1, num2, num1 / num2);
+        try (var scanner = new Scanner(System.in)) {
+            double num1 = Double.parseDouble(scanner.nextLine());
+            double num2 = Double.parseDouble(scanner.nextLine());
+            if (num1 % 2 == 0) {
+                System.out.printf("%.0f * %.0f = %.0f%n", num1, num2, num1 * num2);
+            } else {
+                System.out.printf("%.0f / %.0f = %.1f%n", num1, num2, num1 / num2);
+            }
+        } catch (NumberFormatException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
         }
     }
 }

@@ -2,7 +2,6 @@ package com.vtb.interfaces.iterator;
 
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.ListIterator;
 import java.util.Set;
 
 public class IteratorExample {
