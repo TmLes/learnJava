@@ -1,0 +1,17 @@
+4 Базовых абстрактных класса
+
+InputStream - читать байты
+OutputStream - записывать байты
+
+Reader - читать символы
+Writer - записывать символы
+
+Реализации InputStream:
+    FileInputStream                     читать из файла
+    ByteArrayInputStream                читать массив байт
+    BufferedInputStream                 буферезированная обертка (Must have)
+    DataInputStream                     двоичный структурированные данные
+    PipedInputStream                    неиспользовать
+    ZipFile.getInputStream(ZipEntry)    файл из zip
+    Process.getInputStream()            стандартный вывод процесса
+    URL.openStream()                    содержимое по url
