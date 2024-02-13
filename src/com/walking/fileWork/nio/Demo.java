@@ -10,7 +10,7 @@ import java.nio.file.Paths;
  * Более современное API для работы с файлами
  */
 
-public class Main {
+public class Demo {
 
   public static void main(String[] args) {
     showDemoPath();
