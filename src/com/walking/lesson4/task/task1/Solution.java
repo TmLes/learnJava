@@ -17,7 +17,6 @@ public class Solution {
                 System.out.printf("%.0f / %.0f = %.1f%n", num1, num2, num1 / num2);
             }
         } catch (NumberFormatException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }

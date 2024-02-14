@@ -25,20 +25,20 @@ import java.util.Scanner;
 public class Main {
 
   public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
+    try (Scanner scanner = new Scanner(System.in)) {
+      List<MyFile> myFileList = new ArrayList<>();
+      myFileList.add(new MyFile("kids", 13, DataTypes.JPG));
+      myFileList.add(new MyFile("fish", 25, DataTypes.AVI));
+      myFileList.add(new MyFile("form", 4, DataTypes.TXT));
+      myFileList.add(new MyFile("love", 8, DataTypes.MP3));
 
-    List<MyFile> myFileList = new ArrayList<>();
-    myFileList.add(new MyFile("kids", 13, DataTypes.JPG));
-    myFileList.add(new MyFile("fish", 25, DataTypes.AVI));
-    myFileList.add(new MyFile("form", 4, DataTypes.TXT));
-    myFileList.add(new MyFile("love", 8, DataTypes.MP3));
-
-    System.out.println("Enter file name");
-    String name = scanner.nextLine();
-    try {
-      search(myFileList, name);
-    } catch (FileNotFoundException e) {
-      System.out.println("File is not found");
+      System.out.println("Enter file name");
+      String name = scanner.nextLine();
+      try {
+        search(myFileList, name);
+      } catch (FileNotFoundException e) {
+        System.out.println("File is not found");
+      }
     }
   }
 

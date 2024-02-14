@@ -14,10 +14,8 @@ public class UrlStreamExample {
             InputStream is = new URL("https://dzen.ru/?yredirect=true").openStream();
             System.out.printf(new String(is.readAllBytes()), StandardCharsets.UTF_8);
         } catch (MalformedURLException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
 

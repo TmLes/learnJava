@@ -8,34 +8,32 @@ import java.util.Scanner;
 class Main {
     public static void main(String[] args) {
         CounterService service = CounterService.getInstance();
-        Counter gas = new GasCounter("gas", service);
-        Counter electric = new ElectricCounter("electric", service);
-        Counter water = new WaterCounter("water", service);
         action(service);
+
     }
 
     private static void action(CounterService service) {
-        Scanner scanner = new Scanner(System.in);
+        try (Scanner scanner = new Scanner(System.in)) {
+            while (true) {
+                System.out.println("Choice the action, please:");
+                System.out.println("1: Press 0 to exit.");
+                System.out.println("2: Press 1 to show all counters.");
+                System.out.println("3: Press 2 to set value of counter");
+                System.out.println("4: Press 3 to set value to zero");
+                System.out.println("5: Press 4 to show values of counters");
+                System.out.print("Your choice: ");
+                int choice = scanner.nextInt();
 
-        while (true) {
-            System.out.println("Choice the action, please:");
-            System.out.println("1: Press 0 to exit.");
-            System.out.println("2: Press 1 to show all counters.");
-            System.out.println("3: Press 2 to set value of counter");
-            System.out.println("4: Press 3 to set value to zero");
-            System.out.println("5: Press 4 to show values of counters");
-            System.out.print("Your choice: ");
-            int choice = scanner.nextInt();
+                if (choice == 0) {
+                    break;
+                }
 
-            if (choice == 0) {
-                break;
-            }
-
-            switch (choice) {
-                case 1 -> service.showAll();
-                case 2 -> service.setValue();
-                case 3 -> service.setValueToZero();
-                case 4 -> show(service);
+                switch (choice) {
+                    case 1 -> service.showAll();
+                    case 2 -> service.setValue();
+                    case 3 -> service.setValueToZero();
+                    case 4 -> show(service);
+                }
             }
         }
     }
@@ -69,25 +67,27 @@ class CounterService {
     }
 
     public void setValue() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the name of counter to set value: ");
-        String name = scanner.nextLine();
-        System.out.print("Enter new value: ");
-        int newValue = scanner.nextInt();
-        counters.stream()
-                .filter(counter -> counter.getNAME().equals(name))
-                .findFirst()
-                .ifPresent(counter -> counter.setValue(newValue));
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.print("Enter the name of counter to set value: ");
+            String name = scanner.nextLine();
+            System.out.print("Enter new value: ");
+            int newValue = scanner.nextInt();
+            counters.stream()
+                    .filter(counter -> counter.getNAME().equals(name))
+                    .findFirst()
+                    .ifPresent(counter -> counter.setValue(newValue));
+        }
     }
 
     public void setValueToZero() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the name of counter to set value to zero: ");
-        String name = scanner.nextLine();
-        counters.stream()
-                .filter(counter -> counter.getNAME().equals(name))
-                .findFirst()
-                .ifPresent(counter -> counter.setValue(0));
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.print("Enter the name of counter to set value to zero: ");
+            String name = scanner.nextLine();
+            counters.stream()
+                    .filter(counter -> counter.getNAME().equals(name))
+                    .findFirst()
+                    .ifPresent(counter -> counter.setValue(0));
+        }
     }
 
     public List<Counter> getCounters() {

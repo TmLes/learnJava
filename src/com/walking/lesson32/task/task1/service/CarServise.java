@@ -32,7 +32,6 @@ public enum CarServise {
             oos.writeObject(base);
             System.out.println("Base is save!");
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
