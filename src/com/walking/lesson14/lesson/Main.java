@@ -5,19 +5,19 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String current = scanner.nextLine().toUpperCase();
-        Day day = Day.valueOf(current);
+        try (Scanner scanner = new Scanner(System.in)) {
+            String current = scanner.nextLine().toUpperCase();
+            Day day = Day.valueOf(current);
 
-        switch (day) {
-            case MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY:
-                System.out.println("Go to work");
-            case SATURDAY, SUNDAY:
-                System.out.println("Go to relax");
-            default:
-                System.out.println("Drink beer");
+            switch (day) {
+                case MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY:
+                    System.out.println("Go to work");
+                case SATURDAY, SUNDAY:
+                    System.out.println("Go to relax");
+                default:
+                    System.out.println("Drink beer");
+            }
         }
-
         Animal mars = new Animal("Mars", Color.GREY);
         Animal gerda = new Animal("Gerda", Color.BLACK);
 
