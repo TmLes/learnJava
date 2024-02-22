@@ -10,7 +10,6 @@ public class Test1 {
       try {
         m1.run();
       } catch (InterruptedException e) {
-        // TODO Auto-generated catch block
         e.printStackTrace();
       }
     });
@@ -18,7 +17,6 @@ public class Test1 {
       try {
         m2.run();
       } catch (InterruptedException e) {
-        // TODO Auto-generated catch block
         e.printStackTrace();
       }
     });
@@ -31,13 +29,11 @@ public class Test1 {
         thread1.join();
         System.out.println(m1.name + " finished!");
       } catch (Exception e) {
-        // TODO: handle exception
       }
       try {
         thread2.join();
         System.out.println(m2.name + " finished!");
       } catch (Exception e) {
-        // TODO: handle exception
       }
     });
     thread3.start();
