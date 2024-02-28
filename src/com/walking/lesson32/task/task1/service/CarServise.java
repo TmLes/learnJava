@@ -26,7 +26,7 @@ public enum CarServise {
     }
 
     public void save() {
-        File file = new File("resourses/carCatalog.txt");
+        File file = new File("resources/carCatalog.txt");
         try (FileOutputStream fos = new FileOutputStream(file);
         ObjectOutputStream oos = new ObjectOutputStream(fos)) {
             oos.writeObject(base);

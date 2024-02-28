@@ -11,7 +11,7 @@ public class BufferedRWStreamExample {
   public static void main(String[] args) {
     try (
       BufferedReader br = new BufferedReader(
-        new FileReader("resourses/test.txt")
+        new FileReader("resources/test.txt")
       );
       BufferedWriter bw = new BufferedWriter(
         new FileWriter("resourses/newTest.txt")

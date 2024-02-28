@@ -11,10 +11,10 @@ public class PathExample {
     /*
      * Paths.get() можно и нужно заменить на Paths.of()
      */
-    Path path1 = Paths.get("resourses/newFolder/word.txt");
+    Path path1 = Paths.get("resources/util/word.txt");
     System.out.println(path1.toString());
 
-    String parentDirectory = Paths.get("resourses/newFolder").toString();
+    String parentDirectory = Paths.get("resources/util").toString();
     String fileName = "word.txt";
     Path path2 = Paths.get(parentDirectory, fileName);
     System.out.println(path2.toString());

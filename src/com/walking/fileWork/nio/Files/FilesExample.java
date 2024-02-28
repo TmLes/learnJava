@@ -9,11 +9,11 @@ import java.util.stream.Stream;
 public class FilesExample {
 
   public static void main(String[] args) {
-    Path path = Path.of("resourses/test.txt");
+    Path path = Path.of("resources/test.txt");
     Path path1 = Path.of("resourses");
 
     // проход по содержимому файла
-    try (Stream<String> lines = Files.lines(Path.of( "resourses/test.txt"))) {
+    try (Stream<String> lines = Files.lines(Path.of("resources/test.txt"))) {
         lines.forEach(System.out::println);
     } catch (IOException e) {
         System.out.println(e.getMessage());
@@ -33,7 +33,7 @@ public class FilesExample {
     }
 
     try {
-        byte[] array = Files.readAllBytes(Path.of("resourses/test.txt"));
+        byte[] array = Files.readAllBytes(Path.of("resources/test.txt"));
         for (byte b : array) {
             System.out.println((char) b);
         }
