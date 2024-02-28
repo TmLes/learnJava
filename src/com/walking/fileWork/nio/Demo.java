@@ -60,7 +60,7 @@ private static void showDemoPath() {
         System.out.println(e.getMessage());
     }
 
-    Path newPath = Paths.get("resourses/newFolder");  // создать директорию
+    Path newPath = Paths.get("resources/util");  // создать директорию
     try {
         Files.createDirectory(newPath);
         System.out.println("Directory has been created");
@@ -68,7 +68,7 @@ private static void showDemoPath() {
         System.out.println(e.getMessage());
     }
 
-    Path newFile = Paths.get("resourses/newFolder/test.txt");  // создать файл
+    Path newFile = Paths.get("resources/util/test.txt");  // создать файл
     try {
         Files.createFile(newFile);
         System.out.println("File has been created");
@@ -76,7 +76,7 @@ private static void showDemoPath() {
         System.out.println(e.getMessage());
     }
 
-    Path newPlace = Paths.get("resourses/test.txt");  // копировать файл (move() - переместить)
+    Path newPlace = Paths.get("resources/test.txt");  // копировать файл (move() - переместить)
     try {
         Files.copy(newFile, newPlace);
         System.out.println("File has been copy");

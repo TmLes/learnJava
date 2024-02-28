@@ -9,7 +9,7 @@ import java.io.InputStream;
 
 public class InputStreamExample {
     public static void main(String[] args) {
-    File file = new File("resourses/test.txt");
+    File file = new File("resources/test.txt");
 
     readByte(file);
     readAllbyte(file);

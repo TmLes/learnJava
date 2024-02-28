@@ -12,7 +12,7 @@ import java.nio.file.Paths;
 
 public class BufferedIOStreamExample {
     public static void main(String[] args) {
-        File inFile = new File("resourses/test.txt");
+        File inFile = new File("resources/test.txt");
         try (BufferedInputStream bis = new BufferedInputStream(new FileInputStream(inFile))) {
             int data;
             while ((data = bis.read()) != -1) {

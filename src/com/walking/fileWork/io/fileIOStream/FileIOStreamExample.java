@@ -9,7 +9,7 @@ import java.io.IOException;
 public class FileIOStreamExample {
 
   public static void main(String[] args) {
-    File file = new File("resourses/test.txt");
+    File file = new File("resources/test.txt");
 
     try (FileInputStream fis = new FileInputStream(file)) {
         byte[] array = fis.readAllBytes();

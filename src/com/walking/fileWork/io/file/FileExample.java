@@ -58,7 +58,7 @@ public class FileExample {
  * Демонстрация создания, переименование, и удаление файлов
  */
 private static void showDemoFiles() {
-    File file = new File("resourses/test.txt"); // создаем файл (если не существует)
+    File file = new File("resources/test.txt"); // создаем файл (если не существует)
     try {
       boolean created = file.createNewFile();
       if (created) {
