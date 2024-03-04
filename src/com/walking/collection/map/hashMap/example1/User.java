@@ -1,6 +1,6 @@
 package com.walking.collection.map.hashMap.example1;
 
-import com.util.UserService;
+import com.util.RandomName;
 
 class User {
 
@@ -10,7 +10,7 @@ class User {
 
     User() {
         this.id = ++count;
-        this.fullName = UserService.getFullName();
+        this.fullName = RandomName.getFullName();
     }
 
     public User(int id, String fullName) {

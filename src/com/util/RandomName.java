@@ -10,7 +10,7 @@ import java.nio.file.Paths;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class UserService {
+public class RandomName {
 
     private static final String NAMES_FILE_PATH = "resources/util/names.txt";
     private static final String SURNAMES_FILE_PATH = "resources/util/surnames.txt";
