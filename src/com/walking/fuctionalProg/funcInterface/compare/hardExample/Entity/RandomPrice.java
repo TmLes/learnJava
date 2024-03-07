@@ -1,4 +1,4 @@
-package com.walking.interfaceExample.funcInterface.compare.hardExample.Entity;
+package com.walking.fuctionalProg.funcInterface.compare.hardExample.Entity;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class RandomPrice {

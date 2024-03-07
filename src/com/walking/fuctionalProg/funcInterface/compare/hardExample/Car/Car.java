@@ -1,10 +1,10 @@
-package com.walking.interfaceExample.funcInterface.compare.hardExample.Car;
+package com.walking.fuctionalProg.funcInterface.compare.hardExample.Car;
 import java.time.LocalDateTime;
 
-import com.walking.interfaceExample.funcInterface.compare.hardExample.Entity.CarColor;
-import com.walking.interfaceExample.funcInterface.compare.hardExample.Entity.Model;
-import com.walking.interfaceExample.funcInterface.compare.hardExample.Entity.ProductDate;
-import com.walking.interfaceExample.funcInterface.compare.hardExample.Entity.RandomPrice;
+import com.walking.fuctionalProg.funcInterface.compare.hardExample.Entity.CarColor;
+import com.walking.fuctionalProg.funcInterface.compare.hardExample.Entity.Model;
+import com.walking.fuctionalProg.funcInterface.compare.hardExample.Entity.ProductDate;
+import com.walking.fuctionalProg.funcInterface.compare.hardExample.Entity.RandomPrice;
 
 
 public class Car implements Comparable<Car> {

@@ -1,4 +1,4 @@
-package com.walking.interfaceExample.funcInterface.compare.hardExample.Entity;
+package com.walking.fuctionalProg.funcInterface.compare.hardExample.Entity;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

@@ -1,4 +1,4 @@
-package com.walking.interfaceExample.funcInterface.compare.simpleExample;
+package com.walking.fuctionalProg.funcInterface.compare.simpleExample;
 
 import java.util.ArrayList;
 import java.util.Collections;

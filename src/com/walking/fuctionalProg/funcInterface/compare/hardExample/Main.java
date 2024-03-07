@@ -1,10 +1,10 @@
-package com.walking.interfaceExample.funcInterface.compare.hardExample;
+package com.walking.fuctionalProg.funcInterface.compare.hardExample;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-import com.walking.interfaceExample.funcInterface.compare.hardExample.Car.Car;
+import com.walking.fuctionalProg.funcInterface.compare.hardExample.Car.Car;
 
 public class Main {
     public static void main(String[] args) {

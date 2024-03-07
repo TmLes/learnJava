@@ -1,4 +1,4 @@
-package com.walking.streamApi.create;
+package com.walking.fuctionalProg.streamApi.create;
 
 import com.util.RandomName;
 import com.util.RandomNumber;

@@ -1,4 +1,4 @@
-package com.walking.interfaceExample.funcInterface.compare.simpleExample;
+package com.walking.fuctionalProg.funcInterface.compare.simpleExample;
 /*
  * Интерфейс Comparable нужен для сравнения и сортировки в натуральном порядке
  */
